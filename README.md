@@ -1,38 +1,23 @@
-# VisDrone-DroneVehicle
-
-Drone-based RGB-Infrared Cross-Modality Vehicle Detection via Uncertainty-Aware Learning [(paper)](https://arxiv.org/abs/2003.02437).
-
-## Abstract
-Drone-based vehicle detection aims at finding the vehicle locations and categories in an aerial image. It empowers smart city traffic management and disaster rescue. Researchers have made mount of efforts in this area and achieved considerable progress. Nevertheless, it is still a challenge when the objects are hard to distinguish, especially in low light conditions. To tackle this problem, we construct a large-scale drone-based RGB-Infrared vehicle detection dataset, termed DroneVehicle. Our DroneVehicle collects 28,439 RGB-Infrared image pairs, covering urban roads, residential areas, parking lots, and other scenarios from day to night. Due to the great gap between RGB and infrared images, cross-modal images provide both effective information and redundant information. To address this dilemma, we further propose an uncertainty-aware cross-modality vehicle detection (UA-CMDet) framework to extract complementary information from cross-modal images, which can significantly improve the detection performance in low light conditions.
-An uncertainty-aware module (UAM) is designed to quantify the uncertainty weights of each modality, which is calculated by the cross-modal Intersection over Union (IoU) and the RGB illumination value. Furthermore, we design an illumination-aware cross-modal non-maximum suppression algorithm to better integrate the modal-specific information in the inference phase. Extensive experiments on the DroneVehicle dataset demonstrate the flexibility and effectiveness of the proposed method for cross-modality vehicle detection. 
-
-![VisDrone](https://github.com/VisDrone/DroneVehicle/blob/master/labelsamples.png)
-
-## Dataset
-The DroneVehicle dataset consists of a total of 56,878 images collected by the drone, half of which are RGB images, and the resting are infrared images. We have made rich annotations with oriented bounding boxes for the five categories. Among them, car has 389,779 annotations in RGB images, and 428,086 annotations in infrared images, truck has 22,123 annotations in RGB images, and 25,960 annotations in infrared images, bus has 15,333 annotations in RGB images, and 16,590 annotations in infrared images, van has 11,935 annotations in RGB images, and 12,708 annotations in infrared images, and freight car has 13,400 annotations in RGB images, and 17,173 annotations in infrared image. This dataset is available on the download page. 
-
-In DroneVehicle, to annotate the objects at the image boundaries, we set a white border with a width of 100 pixels on the top, bottom, left and right of each image, so that the downloaded image scale is 840 x 712. When training our detection network, we can perform pre-processing to remove the surrounding white border and change the image scale to 640 x 512.
-
-### BaiduYun:  
-[Train](https://pan.baidu.com/s/1ptZCJ1mKYqFnMnsgqEyoGg) (code:ngar) 
-
-[Validation](https://pan.baidu.com/s/1e6e9mESZecpME4IEdU8t3Q) (code:jnj6)  
-
-[Test](https://pan.baidu.com/s/1JlXO4jEUQgkR1Vco1hfKhg) (code:tqwc) 
-
-### GoogleDrive:   
-googledrive link will be released soon.
-
-![VisDrone](https://github.com/VisDrone/DroneVehicle/blob/master/dataset_sample.png)
-
-### Code:
-[UA-CMDet](https://github.com/SunYM2020/UA-CMDet)
-
-## Citation 
-
-Please cite this paper if you want to use it in your work.
-```
-@ARTICLE{sun2020drone,
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VisDrone-无人机车辆</font></font></h1><a id="user-content-visdrone-dronevehicle" class="anchor" aria-label="永久链接：VisDrone-DroneVehicle" href="#visdrone-dronevehicle"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过不确定性感知学习进行基于无人机的 RGB 红外跨模态车辆检测</font></font><a href="https://arxiv.org/abs/2003.02437" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（论文）</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">抽象的</font></font></h2><a id="user-content-abstract" class="anchor" aria-label="永久链接：摘要" href="#abstract"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于无人机的车辆检测旨在查找航空图像中的车辆位置和类别。</font><font style="vertical-align: inherit;">赋能智慧城市交通管理和灾害救援。</font><font style="vertical-align: inherit;">研究人员在这一领域做出了大量的努力并取得了长足的进展。</font><font style="vertical-align: inherit;">尽管如此，当物体难以区分时，尤其是在弱光条件下，这仍然是一个挑战。</font><font style="vertical-align: inherit;">为了解决这个问题，我们构建了一个基于无人机的大规模 RGB 红外车辆检测数据集，称为 DroneVehicle。</font><font style="vertical-align: inherit;">我们的 DroneVehicle 收集了 28,439 个 RGB-红外图像对，覆盖城市道路、住宅区、停车场和其他从白天到晚上的场景。</font><font style="vertical-align: inherit;">由于RGB图像和红外图像之间存在巨大差距，跨模态图像既提供了有效信息，也提供了冗余信息。</font><font style="vertical-align: inherit;">为了解决这个困境，我们进一步提出了一种不确定性感知的跨模态车辆检测（UA-CMDet）框架，从跨模态图像中提取补充信息，这可以显着提高弱光条件下的检测性能。</font><font style="vertical-align: inherit;">不确定性感知模块（UAM）旨在量化每种模态的不确定性权重，该权重通过跨模态交并（IoU）和RGB照明值计算得出。</font><font style="vertical-align: inherit;">此外，我们设计了一种照明感知的跨模态非极大值抑制算法，以更好地在推理阶段整合模态特定信息。</font><font style="vertical-align: inherit;">在 DroneVehicle 数据集上进行的大量实验证明了所提出的跨模态车辆检测方法的灵活性和有效性。</font></font></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/VisDrone/DroneVehicle/blob/master/labelsamples.png"><img src="https://github.com/VisDrone/DroneVehicle/raw/master/labelsamples.png" alt="可见无人机" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">数据集</font></font></h2><a id="user-content-dataset" class="anchor" aria-label="永久链接：数据集" href="#dataset"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DroneVehicle数据集总共由无人机采集的56,878张图像组成，其中一半是RGB图像，其余是红外图像。</font><font style="vertical-align: inherit;">我们为这五个类别做了丰富的带有定向边界框的注释。</font><font style="vertical-align: inherit;">其中，汽车在RGB图像中有389,779个标注，在红外图像中有428,086个标注；卡车在RGB图像中有22,123个标注，在红外图像中有25,960个标注；公交车在RGB图像中有15,333个标注；在红外图像中有16,590个标注；货车有RGB图像有11,935个注释，红外图像有12,708个注释，货车有RGB图像有13,400个注释，红外图像有17,173个注释。</font><font style="vertical-align: inherit;">该数据集可在下载页面上找到。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 DroneVehicle 中，为了注释图像边界处的对象，我们在每个图像的顶部、底部、左侧和右侧设置宽度为 100 像素的白色边框，以便下载的图像比例为 840 x 712。检测网络中，我们可以进行预处理以去除周围的白色边框并将图像比例更改为640 x 512。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">百度云：</font></font></h3><a id="user-content-baiduyun" class="anchor" aria-label="永久链接： 百度云：" href="#baiduyun"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://pan.baidu.com/s/1ptZCJ1mKYqFnMnsgqEyoGg" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">火车</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（代码：ngar）</font></font></p>
+<p dir="auto"><a href="https://pan.baidu.com/s/1e6e9mESZecpME4IEdU8t3Q" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">验证</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（代码：jnj6）</font></font></p>
+<p dir="auto"><a href="https://pan.baidu.com/s/1JlXO4jEUQgkR1Vco1hfKhg" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">测试</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（代码：tqwc）</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">谷歌云端硬盘：</font></font></h3><a id="user-content-googledrive" class="anchor" aria-label="永久链接：GoogleDrive：" href="#googledrive"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">googledrive 链接即将发布。</font></font></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/VisDrone/DroneVehicle/blob/master/dataset_sample.png"><img src="https://github.com/VisDrone/DroneVehicle/raw/master/dataset_sample.png" alt="可见无人机" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码：</font></font></h3><a id="user-content-code" class="anchor" aria-label="永久链接： 代码：" href="#code"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://github.com/SunYM2020/UA-CMDet"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">UA-CMDet</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">引文</font></font></h2><a id="user-content-citation" class="anchor" aria-label="永久链接：引文" href="#citation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想在工作中使用本文，请引用它。</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>@ARTICLE{sun2020drone,
   title={Drone-based RGB-Infrared Cross-Modality Vehicle Detection via Uncertainty-Aware Learning}, 
   author={Sun, Yiming and Cao, Bing and Zhu, Pengfei and Hu, Qinghua},
   journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
@@ -42,7 +27,23 @@ Please cite this paper if you want to use it in your work.
   pages={1-1},
   doi={10.1109/TCSVT.2022.3168279}
 }
-```
-
-
-
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="@ARTICLE{sun2020drone,
+  title={Drone-based RGB-Infrared Cross-Modality Vehicle Detection via Uncertainty-Aware Learning}, 
+  author={Sun, Yiming and Cao, Bing and Zhu, Pengfei and Hu, Qinghua},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TCSVT.2022.3168279}
+}" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+</article></div>
